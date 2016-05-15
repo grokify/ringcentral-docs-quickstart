@@ -1,15 +1,15 @@
 # Answering Rules
 
-Each RingCentral extension has two answering rule resources, one for business hours and another for after hours. These can be configured by end-users using the RingCentral Online Account Portal under extension Call Handling & Forwarding.
+Answering Rules enable users to control how calls are handled when their extension is called. Users can set which phone numbers are called, in which order and after what delay, as well as configure Ring Groups.
 
-The answering rule API endpoint is:
+Answering rules are handled by the `account/~/extension/~/answering-rule` endpoint and associate rules with phone numbers handled by the user's forwarding number endpoint. Each user has 2 default answering rules for business hours and after hours, known as `business-hours-rule` and `after-hours-rule`, as well as custom rules.
 
-* `v1.0/account/~/extension/~/answering-rule/`
-
-There are standard rules for `business-hours-rule` and `after-hours-rule` as well as support for custom rules. Standard rule endpoints are shown below:
-
-* `v1.0/account/~/extension/~/answering-rule/business-hours-rule`
-* `v1.0/account/~/extension/~/answering-rule/after-hours-rule`
+| API | path |
+|-----|------|
+| Answering Rule Endpoint | `v1.0/account/~/extension/~/answering-rule/` |
+| Answering Rule Endpoint for Business Hours Rule | `v1.0/account/~/extension/~/answering-rule/business-hours-rule` |
+| Answering Rule Endpoint for After Hours Rule | `v1.0/account/~/extension/~/answering-rule/after-hours-rule` |
+| Forwarding Number Endpoint | `v1.0/account/~/extension/~/forwarding-number/` |
 
 ## Read Answering Rule List
 
@@ -166,6 +166,43 @@ Content-Type: application/json
 
 ## Update an Answering Rule
 
+Answering rules can be updated by configuring forwarding numbers individuall and in Ring Groups. For each forwarding number, the `index` and `forwardingNumber.id` is required.
+
+### Example Request
+
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `PUT` | `v1.0/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}` | Update a rule |
+
+```bash
+PUT /restapi/v1.0/account/11111111/extension/22222222/answering-rule/business-hours-rule HTTP/1.1
+Accept: application/json
+Authorization: Bearer MyAccessToken
+Content-Type: application/json
+
+{
+  "forwarding": {
+    "rules": [
+      {
+        "index": 1,
+        "ringCount": 2,
+        "forwardingNumbers": [
+          { id: "22223333" },
+          { id: "22224444" }
+        ]
+      },
+      {
+        "index": 2,
+        "ringCount": 4,
+        "forwardingNumbers": [
+          { id: "22225555" }
+        ]
+      }
+    ]
+  }
+}
+```
 
 ## Delete an Answering Rule
 
