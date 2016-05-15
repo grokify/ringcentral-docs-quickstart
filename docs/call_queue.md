@@ -114,7 +114,7 @@ Authorization: Bearer MyToken
 
 ### Example Response
 
-```bash```bash
+```bash
 HTTP/1.1 200 OK
 Content-Type: application/json
 
