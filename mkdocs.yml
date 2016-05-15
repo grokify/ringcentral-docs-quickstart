@@ -1,0 +1,8 @@
+site_name: RingCentral Developer Quickstart
+site_url: https://developers.ringcentral.com
+repo_url: https://github.com/grokify/ringcentral-docs-quickstart
+docs_dir: docs
+theme: readthedocs
+pages:
+
+- ['call_queue.md', 'Quickstart', 'Call Queue']
