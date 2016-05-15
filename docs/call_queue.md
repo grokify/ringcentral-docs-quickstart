@@ -96,7 +96,7 @@ Content-Type: application/json
 Content-Language: en-US
 ```
 
-## List Queue Members
+## Get Queue Members List
 
 To get the members of a queue, call the department members endpoint.
 
@@ -137,7 +137,7 @@ Content-Type: application/json
 }
 ```
 
-## Get Extension Queue Presence
+## Get Extension Queue Presence Configuration
 
 Queue presence is set by the extension's presence `dndStatus` property which can be set to one of four values:
 
@@ -158,7 +158,7 @@ Accept: application/json
 Authorization: Bearer MyToken
 ```
 
-### Enabling and Disabling Queue Membership Presence
+### Update Extension Queue Presence Configuration
 
 To enable or disable an extensions membership presence, update the extensions
 
@@ -177,3 +177,50 @@ Authorization: Bearer MyToken
   "dndStatus": "DoNotAcceptDepartmentCalls"
 }
 ```
+
+## Get Extension Presence
+
+A user extension's actual presence status is determined by a number of different presence statuses including `dndStatus`, `telephonyStatus` and `userStatus`. These and the aggregate presence, `presenceStatus` are availabe in the presence endpoint.
+
+| Endpoint | Description |
+|----------|-------------|
+| `v1.0/account/{accountId}/extension/{extensionId}/presence` | Get extension presence |
+
+### Example Request
+
+```bash
+GET /restapi/v1.0/account/11112222/department/11112222/members
+Accept: application/json
+Authorization: Bearer MyToken
+```
+
+### Example Response
+
+```bash
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 530
+
+{
+  "uri" : "https.../restapi/v1.0/account/11111111/extension/22223333/presence",
+  "extension" : {
+    "uri" : "https.../restapi/v1.0/account/11111111/extension/22223333",
+    "id" : 22223333,
+    "extensionNumber" : "101"
+  },
+  "presenceStatus" : "Available",
+  "telephonyStatus" : "NoCall",
+  "userStatus" : "Available",
+  "dndStatus" : "TakeAllCalls",
+  "message" : "Hello, World",
+  "allowSeeMyPresence" : true,
+  "ringOnMonitoredCall" : false,
+  "pickUpCallsOnHold" : false
+}
+```
+
+## Subscribing for Presence Notification Events
+
+To receive events about presence changes to an extension, you can make a subscription for the following extension presence information using the following event filter. To subscribe for multiple extensions, multiple event filters, one or more per extension can be supplied for a single subscription.
+
+`v1.0/account/{accountId}/extension/{extensionId}/presence?detailedTelephonyState=true`
