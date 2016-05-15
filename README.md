@@ -2,5 +2,5 @@
 
 ## Voice
 
-* [answering_rules.md](Answering Rules)
-* [call_queue.md](Call Queue)
+* [Answering Rules](docs/answering_rules.md)
+* [Call Queue](docs/call_queue.md)
