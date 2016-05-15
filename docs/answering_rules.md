@@ -2,12 +2,16 @@
 
 Each RingCentral extension has two answering rule resources, one for business hours and another for after hours. These can be configured by end-users using the RingCentral Online Account Portal under extension Call Handling & Forwarding.
 
-The API endpoints are as follows:
+The answering rule API endpoint is:
+
+* `v1.0/account/~/extension/~/answering-rule/`
+
+There are standard rules for `business-hours-rule` and `after-hours-rule` as well as support for custom rules. Standard rule endpoints are shown below:
 
 * `v1.0/account/~/extension/~/answering-rule/business-hours-rule`
 * `v1.0/account/~/extension/~/answering-rule/after-hours-rule`
 
-## Read Answering Ruile List
+## Read Answering Rule List
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -178,7 +182,7 @@ An update can be written as follows:
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `PUT` | `v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{ForwardingNumberId}` | Update a forwarding number |
+| `PUT` | `v1.0/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}` | Update a forwarding number |
 
 ### Example Request
 
