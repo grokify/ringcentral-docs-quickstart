@@ -10,9 +10,9 @@ Creating a call queue is performed in the Online Account Portal under groups.
 
 The List Extensions endpoint can be used to retrieve a list of call queues, known as departments via the API.
 
-| Endpoint | Description |
-|----------|-------------|
-| `account/{accountId}/extension?type=Department` | Get a list of call queues, aka departments |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET`  | `v1.0/account/{accountId}/extension?type=Department` | Get a list of call queues, aka departments |
 
 ### Example Request
 
@@ -55,9 +55,9 @@ Content-Type: application/json
 
 Users can be added and removed using the `account/~/department/bulk-assign` endpoint and the extension ids of interest.
 
-| Endpoint | Description |
-|----------|-------------|
-| `account/{accountId}/department/bulk-assign` | Add and remove multiple users from one or more departments |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `POST` | `v1.0/account/{accountId}/department/bulk-assign` | Add and remove multiple users from one or more departments |
 
 ### Example Request
 
@@ -100,9 +100,9 @@ Content-Language: en-US
 
 To get the members of a queue, call the department members endpoint.
 
-| Endpoint | Description |
-|----------|-------------|
-| `v1.0/account/{accountId}/department/{departmentId}/members` | Get department members |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `v1.0/account/{accountId}/department/{departmentId}/members` | Get department members |
 
 ### Example Request
 
@@ -146,9 +146,9 @@ Queue presence is set by the extension's presence `dndStatus` property which can
 1. `DoNotAcceptDepartmentCalls`
 1. `TakeDepartmentCallsOnly`
 
-| Endpoint | Description |
-|----------|-------------|
-| `v1.0/account/{accountId}/extension/{extensionId}/presence` | Get extension presence |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `v1.0/account/{accountId}/extension/{extensionId}/presence` | Get extension presence |
 
 ### Example Request
 
@@ -162,9 +162,9 @@ Authorization: Bearer MyToken
 
 To enable or disable an extensions membership presence, update the extensions
 
-| Endpoint | Description |
-|----------|-------------|
-| `v1.0/account/{accountId}/extension/{extensionId}/presence` | Get extension presence |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `PUT` | `v1.0/account/{accountId}/extension/{extensionId}/presence` | Get extension presence |
 
 ### Example Request
 
@@ -182,9 +182,9 @@ Authorization: Bearer MyToken
 
 A user extension's actual presence status is determined by a number of different presence statuses including `dndStatus`, `telephonyStatus` and `userStatus`. These and the aggregate presence, `presenceStatus` are availabe in the presence endpoint.
 
-| Endpoint | Description |
-|----------|-------------|
-| `v1.0/account/{accountId}/extension/{extensionId}/presence` | Get extension presence |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `v1.0/account/{accountId}/extension/{extensionId}/presence` | Get extension presence |
 
 ### Example Request
 
