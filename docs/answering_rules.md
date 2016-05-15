@@ -168,6 +168,8 @@ Content-Type: application/json
 
 Answering rules can be updated by configuring forwarding numbers individuall and in Ring Groups. For each forwarding number, the `index` and `forwardingNumber.id` is required.
 
+The `ringCount` property indicates how many times the call should ring before moving to the next rule. Each ring corresponds to 5 seconds in the Online Account Portal.
+
 ### Example Request
 
 
