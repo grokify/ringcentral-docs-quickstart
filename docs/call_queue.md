@@ -158,7 +158,7 @@ Accept: application/json
 Authorization: Bearer MyToken
 ```
 
-### Update Extension Queue Presence Configuration
+### Set Extension Queue Presence Configuration
 
 To enable or disable an extensions membership presence, update the extensions
 
@@ -219,7 +219,7 @@ Content-Length: 530
 }
 ```
 
-## Subscribing for Presence Notification Events
+## Subscribe for Presence Notification Events
 
 To receive events about presence changes to an extension, you can make a subscription for the following extension presence information using the following event filter. To subscribe for multiple extensions, multiple event filters, one or more per extension can be supplied for a single subscription.
 
