@@ -30,24 +30,34 @@ Authorization: Bearer MyToken
 HTTP/1.1 200 OK
 Content-Type: application/json
 
-{"uri"=>
-  "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/extension?type=Department&page=1&perPage=100",
- "records"=>
-  [{"uri"=>
-     "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/extension/22223333",
-    "id"=>22223333,
-    "extensionNumber"=>"201",
-    "contact"=>
-     {"firstName"=>"Sales Queue", "email"=>"john.ringforce@gmail.com"},
-    "name"=>"Sales Queue",
-    "type"=>"Department",
-    "status"=>"Enabled",
-    "permissions"=>
-     {"admin"=>{"enabled"=>false}, "internationalCalling"=>{"enabled"=>false}},
-    "profileImage"=>
-     {"uri"=>
-       "https://platform.devtest.ringcentral.com/restapi/v1.0/account/130709004/extension/131085004/profile-image"}}],
- "paging"=>{...}
+{
+  "uri": "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/extension?type=Department&page=1&perPage=100",
+  "records": [
+    {
+      "uri": "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/extension/22223333",
+      "id": 22223333,
+      "extensionNumber": "201",
+      "contact": {
+        "firstName": "Sales Queue",
+        "email": "john.ringforce@gmail.com"
+      },
+      "name": "Sales Queue",
+      "type": "Department",
+      "status": "Enabled",
+      "permissions": {
+        "admin": {
+          "enabled": false
+        },
+        "internationalCalling": {
+          "enabled": false
+        }
+      },
+      "profileImage"=> {
+        "uri": "https://platform.devtest.ringcentral.com/restapi/v1.0/account/130709004/extension/131085004/profile-image"
+      }
+    }
+  ],
+  "paging"=>{...}
 }
 ```
 
