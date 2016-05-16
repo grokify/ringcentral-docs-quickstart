@@ -2,7 +2,7 @@
 
 Call queues are ways to have multiple people response to incoming calls. Some characteristics of call queues include:
 
-## Creating a Call Queue
+## Create a Call Queue
 
 Creating a call queue is performed in the Online Account Portal under groups.
 
@@ -51,7 +51,7 @@ Content-Type: application/json
 }
 ```
 
-## Adding and Removing Queue Members
+## Update Queue Members
 
 Users can be added and removed using the `account/~/department/bulk-assign` endpoint and the extension ids of interest.
 
@@ -96,7 +96,7 @@ Content-Type: application/json
 Content-Language: en-US
 ```
 
-## Get Queue Members List
+## Read Queue Members List
 
 To get the members of a queue, call the department members endpoint.
 
@@ -137,7 +137,7 @@ Content-Type: application/json
 }
 ```
 
-## Get Extension Queue Presence Configuration
+## Read Extension Queue Presence Configuration
 
 Queue presence is set by the extension's presence `dndStatus` property which can be set to one of four values:
 
@@ -158,7 +158,7 @@ Accept: application/json
 Authorization: Bearer MyToken
 ```
 
-### Set Extension Queue Presence Configuration
+### Update Extension Queue Presence Configuration
 
 To enable or disable an extensions membership presence, update the extensions
 
@@ -178,7 +178,7 @@ Authorization: Bearer MyToken
 }
 ```
 
-## Get Extension Presence
+## Read Extension Presence
 
 A user extension's actual presence status is determined by a number of different presence statuses including `dndStatus`, `telephonyStatus` and `userStatus`. These and the aggregate presence, `presenceStatus` are availabe in the presence endpoint.
 
