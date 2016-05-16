@@ -6,7 +6,7 @@ Call queues are ways to have multiple people response to incoming calls. Some ch
 
 Creating a call queue is performed in the Online Account Portal under groups.
 
-## Get Call Queue List
+## Read Call Queue List
 
 The List Extensions endpoint can be used to retrieve a list of call queues, known as departments via the API.
 
