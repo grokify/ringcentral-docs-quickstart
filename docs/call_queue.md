@@ -31,33 +31,33 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "uri": "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/extension?type=Department&page=1&perPage=100",
-  "records": [
+  "uri" : "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/extension?type=Department&page=1&perPage=100",
+  "records" : [
     {
-      "uri": "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/extension/22223333",
-      "id": 22223333,
-      "extensionNumber": "201",
-      "contact": {
-        "firstName": "Sales Queue",
-        "email": "john.ringforce@gmail.com"
+      "uri" : "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/extension/22223333",
+      "id" : 22223333,
+      "extensionNumber" : "201",
+      "contact" : {
+        "firstName" : "Sales Queue",
+        "email" : "john.doe@example.com"
       },
-      "name": "Sales Queue",
-      "type": "Department",
-      "status": "Enabled",
-      "permissions": {
-        "admin": {
-          "enabled": false
+      "name" : "Sales Queue",
+      "type" : "Department",
+      "status" : "Enabled",
+      "permissions" : {
+        "admin" : {
+          "enabled" : false
         },
-        "internationalCalling": {
-          "enabled": false
+        "internationalCalling" : {
+          "enabled" : false
         }
       },
-      "profileImage"=> {
-        "uri": "https://platform.devtest.ringcentral.com/restapi/v1.0/account/130709004/extension/131085004/profile-image"
+      "profileImage" : {
+        "uri" : "https://platform.devtest.ringcentral.com/restapi/v1.0/account/130709004/extension/131085004/profile-image"
       }
     }
   ],
-  "paging"=>{...}
+  "paging" : {...}
 }
 ```
 
@@ -78,19 +78,19 @@ Content-Type: application/json
 Authorization: Bearer MyToken
 
 {
-  "items": [
+  "items" : [
     {
-      "departmentId": "22223333",   
-      "addedExtensionIds": [
+      "departmentId" : "22223333",   
+      "addedExtensionIds" : [
         "11112222", "11113333"
       ],
-      "removedExtensionIds": [
+      "removedExtensionIds" : [
         "11114444", "11115555"
       ]
     }, 
     {
-      "departmentId": "22224444",   
-      "addedExtensionIds": [
+      "departmentId" : "22224444",   
+      "addedExtensionIds" : [
         "11112222", "11113333"
       ]
     }
@@ -129,21 +129,21 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "uri": "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/department/22223333/members?page=1&perPage=100",
-  "records": [
+  "uri" : "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/department/22223333/members?page=1&perPage=100",
+  "records" : [
     {
-      "uri": "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/extension/11112222",
-      "id": 11112222,
-      "extensionNumber": "101"
+      "uri" : "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/extension/11112222",
+      "id" : 11112222,
+      "extensionNumber" : "101"
     },
     {
-      "uri": "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/extension/11113333",
-      "id": 11113333,
-      "extensionNumber": "102"
+      "uri" : "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/extension/11113333",
+      "id" : 11113333,
+      "extensionNumber" : "102"
     }
   ],
-  "paging": {...}
-  "navigatin": {...}
+  "paging" : {...}
+  "navigatin" : {...}
 }
 ```
 
