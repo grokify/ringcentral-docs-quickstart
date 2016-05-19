@@ -85,7 +85,7 @@ attachment2
 
 ## Fax via multipart/mixed
 
-`multipart/mixed` is much more compact as shown below but may require a SDK or custom code to create the `multipart/mixed` body.
+`multipart/mixed` is more compact as shown below but is not supported natively by HTTP clients so either a RingCentral SDK or custom `multipart/mixed` code may be needed.
 
 ```bash
 POST /restapi/v1.0/account/11112222/extension/22223333/fax HTTP/1.1
