@@ -147,50 +147,9 @@ Content-Type: application/json
 }
 ```
 
-## Read Extension Queue Presence Configuration
-
-An extension's queue presence is set by the extension presence `dndStatus` property which can be set to one of four values:
-
-1. `TakeAllCalls`
-1. `DoNotAcceptAnyCalls`
-1. `DoNotAcceptDepartmentCalls`
-1. `TakeDepartmentCallsOnly`
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `v1.0/account/{accountId}/extension/{extensionId}/presence` | Read extension presence |
-
-### Example Request
-
-```bash
-GET /restapi/v1.0/account/11111111/extension/11112222/presence
-Accept: application/json
-Authorization: Bearer MyToken
-```
-
-### Update Extension Queue Presence Configuration
-
-To enable or disable an extension's queue presence, update the extension's presence `dndStatus` property.
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `PUT` | `v1.0/account/{accountId}/extension/{extensionId}/presence` | Update extension presence |
-
-### Example Request
-
-```bash
-PUT /restapi/v1.0/account/11111111/extension/11112222/presence
-Accept: application/json
-Authorization: Bearer MyToken
-
-{
-  "dndStatus": "DoNotAcceptDepartmentCalls"
-}
-```
-
 ## Read Extension Presence
 
-A user extension's actual presence status is determined by a number of different presence statuses including `dndStatus`, `telephonyStatus` and `userStatus`. These and the aggregate presence, `presenceStatus` are availabe in the presence endpoint.
+A user extension's actual presence status is determined by aggregating a number of different presence statuses including `dndStatus`, `telephonyStatus` and `userStatus`. These and the aggregate presence, `presenceStatus` are availabe in the presence endpoint.
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -226,6 +185,47 @@ Content-Length: 530
   "allowSeeMyPresence" : true,
   "ringOnMonitoredCall" : false,
   "pickUpCallsOnHold" : false
+}
+```
+
+## Read Extension Queue Status Configuration
+
+An extension's queue status is set by the extension presence `dndStatus` property which can be set to one of four values:
+
+1. `TakeAllCalls`
+1. `DoNotAcceptAnyCalls`
+1. `DoNotAcceptDepartmentCalls`
+1. `TakeDepartmentCallsOnly`
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `v1.0/account/{accountId}/extension/{extensionId}/presence` | Read extension presence |
+
+### Example Request
+
+```bash
+GET /restapi/v1.0/account/11111111/extension/11112222/presence
+Accept: application/json
+Authorization: Bearer MyToken
+```
+
+### Update Extension Queue Presence Configuration
+
+To enable or disable an extension's queue presence, update the extension's presence `dndStatus` property.
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `PUT` | `v1.0/account/{accountId}/extension/{extensionId}/presence` | Update extension presence |
+
+### Example Request
+
+```bash
+PUT /restapi/v1.0/account/11111111/extension/11112222/presence
+Accept: application/json
+Authorization: Bearer MyToken
+
+{
+  "dndStatus": "DoNotAcceptDepartmentCalls"
 }
 ```
 
