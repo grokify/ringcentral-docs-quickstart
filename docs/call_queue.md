@@ -151,6 +151,8 @@ Content-Type: application/json
 
 A user extension's actual presence status is determined by aggregating a number of different presence statuses including `dndStatus`, `telephonyStatus` and `userStatus`. These and the aggregate presence, `presenceStatus` are availabe in the presence endpoint.
 
+The extension's call queue `dndStatus` is described in more detail below.
+
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | `GET` | `v1.0/account/{accountId}/extension/{extensionId}/presence` | Read extension presence |
@@ -188,7 +190,7 @@ Content-Length: 530
 }
 ```
 
-## Read Extension Queue Status Configuration
+## Update Extension Queue DND Status
 
 An extension's queue status is set by the extension presence `dndStatus` property which can be set to one of four values:
 
