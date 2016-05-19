@@ -149,7 +149,7 @@ Content-Type: application/json
 
 ## Read Extension Queue Presence Configuration
 
-An extension's call queue presence is set by the extension presence `dndStatus` property which can be set to one of four values:
+An extension's queue presence is set by the extension presence `dndStatus` property which can be set to one of four values:
 
 1. `TakeAllCalls`
 1. `DoNotAcceptAnyCalls`
@@ -170,7 +170,7 @@ Authorization: Bearer MyToken
 
 ### Update Extension Queue Presence Configuration
 
-To enable or disable an extensions membership presence, update the extensions
+To enable or disable an extension's queue presence, update the extension's presence `dndStatus` property.
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
