@@ -11,7 +11,7 @@ For more information on fax support, see the following resources:
 
 ## Fax via multipart/form-data
 
-`multipart/form-data` is a popular approach for sending faxes because many HTTP client libraries support `multipart/formdata` natively due to the fact it is supported by web browsers.
+`multipart/form-data` is a popular approach for sending faxes because many HTTP client libraries support `multipart/form-data` natively due to the fact it is supported by web browsers.
 
 ### Example Request
 
@@ -81,6 +81,7 @@ Content-Type: text/plain
 
 attachment2
 --Boundary_14_2952358_1361963763144--
+```
 
 ## Fax via multipart/mixed
 
