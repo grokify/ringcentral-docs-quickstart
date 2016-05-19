@@ -72,7 +72,7 @@ Users can be added and removed using the `account/~/department/bulk-assign` endp
 ### Example Request
 
 ```bash
-POST /restapi/v1.0/account/~/department/bulk-assign
+POST /restapi/v1.0/account/11111111/department/bulk-assign
 Accept: application/json
 Content-Type: application/json
 Authorization: Bearer MyToken
@@ -117,7 +117,7 @@ To get the members of a queue, call the department members endpoint.
 ### Example Request
 
 ```bash
-POST /restapi/v1.0/account/11112222/department/22223333/members
+POST /restapi/v1.0/account/11111111/department/22223333/members
 Accept: application/json
 Authorization: Bearer MyToken
 ```
@@ -149,7 +149,7 @@ Content-Type: application/json
 
 ## Read Extension Queue Presence Configuration
 
-An extension's call queue presence is set by the `dndStatus` property which can be set to one of four values:
+An extension's call queue presence is set by the extension presence `dndStatus` property which can be set to one of four values:
 
 1. `TakeAllCalls`
 1. `DoNotAcceptAnyCalls`
