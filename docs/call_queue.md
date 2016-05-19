@@ -12,12 +12,12 @@ The List Extensions endpoint can be used to retrieve a list of call queues, know
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `GET`  | `v1.0/account/{accountId}/extension?type=Department` | Get a list of call queues, aka departments |
+| `GET`  | `v1.0/account/{accountId}/extension?type=Department` | Read a list of call queues, aka departments |
 
 ### Example Request
 
 ```bash
-GET /restapi/v1.0/account/~/extension?type=Department
+GET /restapi/v1.0/account/11111111/extension?type=Department
 Accept: application/json
 Content-Type: application/json
 Accept-Language: en-US
@@ -53,7 +53,7 @@ Content-Type: application/json
         }
       },
       "profileImage" : {
-        "uri" : "https://platform.devtest.ringcentral.com/restapi/v1.0/account/130709004/extension/131085004/profile-image"
+        "uri" : "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/extension/22223333/profile-image"
       }
     }
   ],
@@ -63,7 +63,7 @@ Content-Type: application/json
 
 ## Update Queue Members
 
-Users can be added and removed using the `account/~/department/bulk-assign` endpoint and the extension ids of interest.
+Users can be added and removed using the `account/{accountId}/department/bulk-assign` endpoint and the extension ids of interest.
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -112,7 +112,7 @@ To get the members of a queue, call the department members endpoint.
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `GET` | `v1.0/account/{accountId}/department/{departmentId}/members` | Get department members |
+| `GET` | `v1.0/account/{accountId}/department/{departmentId}/members` | Read department members |
 
 ### Example Request
 
@@ -158,7 +158,7 @@ An extension's call queue presence is set by the extension presence `dndStatus` 
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `GET` | `v1.0/account/{accountId}/extension/{extensionId}/presence` | Get extension presence |
+| `GET` | `v1.0/account/{accountId}/extension/{extensionId}/presence` | Read extension presence |
 
 ### Example Request
 
@@ -174,7 +174,7 @@ To enable or disable an extensions membership presence, update the extensions
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `PUT` | `v1.0/account/{accountId}/extension/{extensionId}/presence` | Get extension presence |
+| `PUT` | `v1.0/account/{accountId}/extension/{extensionId}/presence` | Update extension presence |
 
 ### Example Request
 
@@ -194,7 +194,7 @@ A user extension's actual presence status is determined by a number of different
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `GET` | `v1.0/account/{accountId}/extension/{extensionId}/presence` | Get extension presence |
+| `GET` | `v1.0/account/{accountId}/extension/{extensionId}/presence` | Read extension presence |
 
 ### Example Request
 
