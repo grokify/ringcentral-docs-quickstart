@@ -149,7 +149,7 @@ Content-Type: application/json
 
 ## Read Extension Queue Presence Configuration
 
-Queue presence is set by the extension's presence `dndStatus` property which can be set to one of four values:
+An extension's call queue presence is set by the `dndStatus` property which can be set to one of four values:
 
 1. `TakeAllCalls`
 1. `DoNotAcceptAnyCalls`
