@@ -163,7 +163,7 @@ An extension's call queue presence is set by the `dndStatus` property which can 
 ### Example Request
 
 ```bash
-GET /restapi/v1.0/account/11112222/extension/11112222/presence
+GET /restapi/v1.0/account/11111111/extension/11112222/presence
 Accept: application/json
 Authorization: Bearer MyToken
 ```
@@ -179,7 +179,7 @@ To enable or disable an extensions membership presence, update the extensions
 ### Example Request
 
 ```bash
-PUT /restapi/v1.0/account/11112222/extension/11112222/presence
+PUT /restapi/v1.0/account/11111111/extension/11112222/presence
 Accept: application/json
 Authorization: Bearer MyToken
 
@@ -199,7 +199,7 @@ A user extension's actual presence status is determined by a number of different
 ### Example Request
 
 ```bash
-GET /restapi/v1.0/account/11112222/extension/11112222/presence
+GET /restapi/v1.0/account/11111111/extension/11112222/presence
 Accept: application/json
 Authorization: Bearer MyToken
 ```
