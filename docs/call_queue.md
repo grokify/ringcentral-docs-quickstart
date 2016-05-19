@@ -1,6 +1,6 @@
 # Call Queue
 
-Call queues are ways to have multiple people response to incoming calls. Some characteristics of call queues include:
+Call queues are a poplar way to have multiple people response to incoming calls.
 
 ## Create a Call Queue
 
