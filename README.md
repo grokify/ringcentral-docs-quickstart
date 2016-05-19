@@ -7,6 +7,7 @@ RingCentral Developer Quickstart
 
 * [Answering Rules](docs/answering_rules.md)
 * [Call Queue](docs/call_queue.md)
+* [Fax](docs/fax.md)
 * [Webhooks](docs/webhooks.md)
 
  [docs-readthedocs-svg]: https://img.shields.io/badge/docs-readthedocs-blue.svg
