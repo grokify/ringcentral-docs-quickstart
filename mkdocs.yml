@@ -8,4 +8,5 @@ pages:
 - ['index.md', 'Quickstart', 'Overview']
 - ['answering_rules.md', 'Quickstart', 'Answering Rules']
 - ['call_queue.md', 'Quickstart', 'Call Queue']
+- ['fax.md', 'Quickstart', 'Fax']
 - ['webhooks.md', 'Quickstart', 'Webhooks']
