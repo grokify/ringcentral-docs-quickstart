@@ -163,7 +163,7 @@ Queue presence is set by the extension's presence `dndStatus` property which can
 ### Example Request
 
 ```bash
-GET /restapi/v1.0/account/11112222/department/11112222/members
+GET /restapi/v1.0/account/11112222/extension/11112222/presence
 Accept: application/json
 Authorization: Bearer MyToken
 ```
@@ -179,7 +179,7 @@ To enable or disable an extensions membership presence, update the extensions
 ### Example Request
 
 ```bash
-PUT /restapi/v1.0/account/11112222/department/11112222/members
+PUT /restapi/v1.0/account/11112222/extension/11112222/presence
 Accept: application/json
 Authorization: Bearer MyToken
 
@@ -199,7 +199,7 @@ A user extension's actual presence status is determined by a number of different
 ### Example Request
 
 ```bash
-GET /restapi/v1.0/account/11112222/department/11112222/members
+GET /restapi/v1.0/account/11112222/extension/11112222/presence
 Accept: application/json
 Authorization: Bearer MyToken
 ```
@@ -212,10 +212,10 @@ Content-Type: application/json
 Content-Length: 530
 
 {
-  "uri" : "https.../restapi/v1.0/account/11111111/extension/22223333/presence",
+  "uri" : "https.../restapi/v1.0/account/11111111/extension/11112222/presence",
   "extension" : {
-    "uri" : "https.../restapi/v1.0/account/11111111/extension/22223333",
-    "id" : 22223333,
+    "uri" : "https.../restapi/v1.0/account/11111111/extension/11112222",
+    "id" : 11112222,
     "extensionNumber" : "101"
   },
   "presenceStatus" : "Available",
