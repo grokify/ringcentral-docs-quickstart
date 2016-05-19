@@ -1,6 +1,6 @@
 # Call Queue
 
-Call queues are a poplar way to have multiple people response to incoming calls.
+Call queues are a poplar way to have multiple people respond to incoming calls.
 
 ## Create a Call Queue
 
