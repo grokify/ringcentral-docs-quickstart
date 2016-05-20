@@ -61,9 +61,9 @@ Content-Type: application/json
 }
 ```
 
-## Read Queue Members List
+## Read Queue Agent List
 
-To get the members of a queue, call the department members endpoint.
+To get the agent members of a queue, call the department members endpoint.
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -102,9 +102,9 @@ Content-Type: application/json
 }
 ```
 
-## Update Queue Members List
+## Update Queue Agent List
 
-Users can be added and removed using the `account/{accountId}/department/bulk-assign` endpoint and the extension ids of interest.
+Users can be added and removed as queue agents using the `account/{accountId}/department/bulk-assign` endpoint and the extension ids of interest.
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
