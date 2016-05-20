@@ -61,7 +61,48 @@ Content-Type: application/json
 }
 ```
 
-## Update Queue Members
+## Read Queue Members List
+
+To get the members of a queue, call the department members endpoint.
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `v1.0/account/{accountId}/department/{departmentId}/members` | Read department members |
+
+### Example Request
+
+```bash
+POST /restapi/v1.0/account/11111111/department/22223333/members
+Accept: application/json
+Authorization: Bearer MyToken
+```
+
+### Example Response
+
+```bash
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "uri" : "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/department/22223333/members?page=1&perPage=100",
+  "records" : [
+    {
+      "uri" : "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/extension/11112222",
+      "id" : 11112222,
+      "extensionNumber" : "101"
+    },
+    {
+      "uri" : "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/extension/11113333",
+      "id" : 11113333,
+      "extensionNumber" : "102"
+    }
+  ],
+  "paging" : {...}
+  "navigatin" : {...}
+}
+```
+
+## Update Queue Members List
 
 Users can be added and removed using the `account/{accountId}/department/bulk-assign` endpoint and the extension ids of interest.
 
@@ -104,47 +145,6 @@ Authorization: Bearer MyToken
 HTTP/1.1 204 No Content
 Content-Type: application/json
 Content-Language: en-US
-```
-
-## Read Queue Members List
-
-To get the members of a queue, call the department members endpoint.
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `v1.0/account/{accountId}/department/{departmentId}/members` | Read department members |
-
-### Example Request
-
-```bash
-POST /restapi/v1.0/account/11111111/department/22223333/members
-Accept: application/json
-Authorization: Bearer MyToken
-```
-
-### Example Response
-
-```bash
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "uri" : "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/department/22223333/members?page=1&perPage=100",
-  "records" : [
-    {
-      "uri" : "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/extension/11112222",
-      "id" : 11112222,
-      "extensionNumber" : "101"
-    },
-    {
-      "uri" : "https://platform.devtest.ringcentral.com/restapi/v1.0/account/11111111/extension/11113333",
-      "id" : 11113333,
-      "extensionNumber" : "102"
-    }
-  ],
-  "paging" : {...}
-  "navigatin" : {...}
-}
 ```
 
 ## Read User Queue Agent Presence
