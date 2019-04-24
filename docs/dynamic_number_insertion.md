@@ -4,7 +4,7 @@
 
 ## Create a Pool of Labeled Numbers
 
-For this we will use one level of indirection and add the labels to the associated Extension to enable API-based updating of campaignIds.
+For this we will use one level of indirection and add the labels to the associated Extension to enable API-based updating of campaignIds. The phone numbers and associated extensions will be static. The campaignIds will be updatable by API.
 
 1. Create a pool of phone numbers for use in targeted ads
 1. Add phone numbers to a pool of extensions
